@@ -509,7 +509,8 @@ class Users extends CI_Controller {
 
         $this->form_validation->set_rules('username', 'Username',
          'trim|required|xss_clean');
-        $this->form_validation->set_rules('password', 'Password', "trim|required|xss_clean|callback_check_database[$refferer_url]");
+        $this->form_validation->set_rules('password', 'Password',
+         "trim|required|xss_clean|callback_check_database[$refferer_url]");
 
         if ($this->form_validation->run() == FALSE) {
             //Field validation failed.  User redirected to login page
