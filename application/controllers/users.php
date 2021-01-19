@@ -540,7 +540,8 @@ class Users extends CI_Controller {
             $session_data = $this->session->userdata('logged_in');
             //array parameters : action, description, 
             //before, after, app_id, app_name, form_id, form_name
-            $logary=array('action'=>'login','description'=>'login','after'=>'Successfull Login');
+            $logary=array('action'=>'login','description'=>
+            	'login','after'=>'Successfull Login');
             addlog($logary);
             
             // if (!$this->acl->hasSuperAdmin()) {
