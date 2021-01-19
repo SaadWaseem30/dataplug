@@ -487,7 +487,8 @@ class Users extends CI_Controller {
     function logout() {
     	if ($this->session->userdata('logged_in')) {
 	        $session_data = $this->session->userdata('logged_in');
-	        //array parameters : action, description, before, after, app_id, app_name, form_id, form_name
+	        //array parameters : action, description, 
+	        //before, after, app_id, app_name, form_id, form_name
 	        $logary=array('action'=>'logout','description'=>'logout');
 	        addlog($logary);
 	        $this->acl->clearACL();
