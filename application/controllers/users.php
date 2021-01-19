@@ -545,7 +545,8 @@ class Users extends CI_Controller {
             addlog($logary);
             
             // if (!$this->acl->hasSuperAdmin()) {
-            //     if($this->acl->hasPermission('complaint','Access only complaint module')){
+            //     if($this->acl->hasPermission('complaint',
+            //     'Access only complaint module')){
             //         redirect(base_url() . 'complaint/index');
             //     }
             // }
