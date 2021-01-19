@@ -538,7 +538,8 @@ class Users extends CI_Controller {
                 setcookie("remember_me_password", '', $past, "/", "");
             }
             $session_data = $this->session->userdata('logged_in');
-            //array parameters : action, description, before, after, app_id, app_name, form_id, form_name
+            //array parameters : action, description, 
+            //before, after, app_id, app_name, form_id, form_name
             $logary=array('action'=>'login','description'=>'login','after'=>'Successfull Login');
             addlog($logary);
             
