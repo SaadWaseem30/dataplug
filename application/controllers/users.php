@@ -496,7 +496,8 @@ class Users extends CI_Controller {
 	        $this->session->unset_userdata('view_session');
 	        session_destroy();
     	}
-        $this->session->set_flashdata('validate', array('message' => 'You are successfully logged out.', 'type' => 'success'));
+        $this->session->set_flashdata('validate', array('message' => 
+        	'You are successfully logged out.', 'type' => 'success'));
         redirect(base_url());
     }
 
