@@ -515,7 +515,8 @@ class Users extends CI_Controller {
         if ($this->form_validation->run() == FALSE) {
             //Field validation failed.  User redirected to login page
             //$this->load->view('users/login');
-            $this->session->set_flashdata('validate', array('message' => 'Invalid Email or Password. Please try again!', 'type' => 'warning'));
+            $this->session->set_flashdata('validate', array('message' => 
+            	'Invalid Email or Password. Please try again!', 'type' => 'warning'));
             //redirect($refferer_url);
             redirect(base_url() . 'guest');
         } else {
