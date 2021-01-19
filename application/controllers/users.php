@@ -470,7 +470,8 @@ class Users extends CI_Controller {
                 if ($row->is_deleted == 1) {
                     $message['status'] = 'Your account has been deleted by admin';
                 } else if ($row->verification_code != '' && $row->status == 0) {
-                    $message['status'] = 'Your account not verified yet, please check your email and verify';
+                    $message['status'] = 'Your account not verified yet,
+                     please check your email and verify';
                 } else if ($row->verification_code == '' && $row->status == 0) {
                     $message['status'] = 'Your account has been deactivaed or not approved yet';
                 } else {
