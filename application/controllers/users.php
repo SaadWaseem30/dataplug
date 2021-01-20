@@ -716,7 +716,8 @@ class Users extends CI_Controller {
                      'Department Name', 'trim' . $required_if . '|min_length[1]|xss_clean|callback_department_name_exists');
                     $this->form_validation->set_rules('department_id', 'Department', 'trim|required|xss_clean');
                 } else {
-                    $this->form_validation->set_rules('group_name', 'Group', 'trim|required|xss_clean|callback_group_already_exist[' . $department_id . ']');
+                    $this->form_validation->set_rules('group_name', 'Group',
+                     'trim|required|xss_clean|callback_group_already_exist[' . $department_id . ']');
                 }
 
                 if ($this->form_validation->run() == FALSE) {
