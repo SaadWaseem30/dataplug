@@ -761,7 +761,8 @@ class Users extends CI_Controller {
     function group_already_exist($group_name, $department_id) {
 
         if ($this->users_model->group_already_exist($group_name, $department_id)) {
-            $this->form_validation->set_message('group_already_exist', '%s already exists');
+            $this->form_validation->set_message('group_already_exist',
+             '%s already exists');
             return false;
         } else {
             return true;
