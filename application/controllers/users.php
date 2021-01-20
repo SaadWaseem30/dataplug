@@ -740,7 +740,8 @@ class Users extends CI_Controller {
                     $logary=array('action'=>'insert','description'=>
                     	'add-group','after'=>  json_encode($data));
                     addlog($logary);
-                    $this->session->set_flashdata('validate', array('message' => 'Group added successfully.', 'type' => 'success'));
+                    $this->session->set_flashdata('validate', array('message' => 
+                    	'Group added successfully.', 'type' => 'success'));
                     redirect(base_url() . 'groups');
                 }
             }
