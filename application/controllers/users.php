@@ -807,7 +807,8 @@ class Users extends CI_Controller {
                 // //Add new permissions to users which belongs to this group
                 $this->users_model->add_user_permissions_by_group($group_id);
 
-                $this->session->set_flashdata('validate', array('message' => 'Group permissions updated.', 'type' => 'success'));
+                $this->session->set_flashdata('validate', array('message' =>
+                 'Group permissions updated.', 'type' => 'success'));
                 redirect(base_url() . 'groups');
             }
 
