@@ -735,7 +735,8 @@ class Users extends CI_Controller {
                         'type' => $groupName
                     );
                     $this->db->insert('users_group', $data);
-                    //array parameters : action, description, before, after, app_id, app_name, form_id, form_name
+                    //array parameters : action, description,
+                    // before, after, app_id, app_name, form_id, form_name
                     $logary=array('action'=>'insert','description'=>'add-group','after'=>  json_encode($data));
                     addlog($logary);
                     $this->session->set_flashdata('validate', array('message' => 'Group added successfully.', 'type' => 'success'));
