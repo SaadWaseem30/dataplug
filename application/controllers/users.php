@@ -1011,7 +1011,8 @@ class Users extends CI_Controller {
             if ($this->input->post('form_type') == 'form_info') {
                 $this->form_validation->set_rules('first_name', 
                 	'First Name', 'trim|required|min_length[1]|xss_clean');
-                $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required|min_length[1]|xss_clean');
+                $this->form_validation->set_rules('last_name', 
+                	'Last Name', 'trim|required|min_length[1]|xss_clean');
             } else if ($this->input->post('form_type') == 'form_email') {
                 $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|callback_email_not_available_edit[' . $user_id . ']');
                 $this->form_validation->set_rules('default_url', 'URL', 'trim|valid_url_format|prep_url');
