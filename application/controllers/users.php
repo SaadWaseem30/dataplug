@@ -1019,7 +1019,8 @@ class Users extends CI_Controller {
                 $this->form_validation->set_rules('default_url',
                  'URL', 'trim|valid_url_format|prep_url');
             } else if ($this->input->post('form_type') == 'form_password') {
-                $this->form_validation->set_rules('current_password', 'Current Password', 'trim|required|min_length[4]|max_length[32]|callback_current_password[' . $user_id . ']');
+                $this->form_validation->set_rules('current_password', 'Current Password', 'trim|required|min_length[4]|max_length[32]|callback_current_password['
+                 . $user_id . ']');
                 $this->form_validation->set_rules('new_password', 'New Password', 'trim|required|min_length[4]|max_length[32]');
                 $this->form_validation->set_rules('conf_new_password', 'Confirm New Password', 'trim|required|matches[new_password]');
             } else if ($this->input->post('form_type') == 'form_cancel') {
