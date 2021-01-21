@@ -938,7 +938,8 @@ class Users extends CI_Controller {
                     $user_id = $this->users_model->add_user($data);
                     //array parameters : action, description, 
                     //before, after, app_id, app_name, form_id, form_name
-                    $logary = array('action' => 'insert', 'description' => 'add-user', 'after' => json_encode($data));
+                    $logary = array('action' => 'insert',
+                     'description' => 'add-user', 'after' => json_encode($data));
                     addlog($logary);
                     //$this->users_model->add_user_permissions_by_user($group_id, $user_id);
                     redirect(base_url() . 'users');
