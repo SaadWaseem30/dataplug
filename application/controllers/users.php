@@ -1014,7 +1014,8 @@ class Users extends CI_Controller {
                 $this->form_validation->set_rules('last_name', 
                 	'Last Name', 'trim|required|min_length[1]|xss_clean');
             } else if ($this->input->post('form_type') == 'form_email') {
-                $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|callback_email_not_available_edit[' . $user_id . ']');
+                $this->form_validation->set_rules('email', 'Email', 
+                	'trim|required|valid_email|callback_email_not_available_edit[' . $user_id . ']');
                 $this->form_validation->set_rules('default_url', 'URL', 'trim|valid_url_format|prep_url');
             } else if ($this->input->post('form_type') == 'form_password') {
                 $this->form_validation->set_rules('current_password', 'Current Password', 'trim|required|min_length[4]|max_length[32]|callback_current_password[' . $user_id . ']');
