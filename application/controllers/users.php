@@ -917,7 +917,8 @@ class Users extends CI_Controller {
 
                 //check if someone is trying to create a superadmin from web...
                 if($department_id==0){
-                    $this->session->set_flashdata('message', '<font color=red>Wrong department selected</font>');
+                    $this->session->set_flashdata('message', 
+                    	'<font color=red>Wrong department selected</font>');
                     redirect(base_url() . 'add-new-user');
 
                 }else {
