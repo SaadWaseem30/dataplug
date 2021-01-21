@@ -1023,7 +1023,8 @@ class Users extends CI_Controller {
                  . $user_id . ']');
                 $this->form_validation->set_rules('new_password',
                  'New Password', 'trim|required|min_length[4]|max_length[32]');
-                $this->form_validation->set_rules('conf_new_password', 'Confirm New Password', 'trim|required|matches[new_password]');
+                $this->form_validation->set_rules('conf_new_password',
+                 'Confirm New Password', 'trim|required|matches[new_password]');
             } else if ($this->input->post('form_type') == 'form_cancel') {
                 
             }
