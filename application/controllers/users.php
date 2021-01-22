@@ -1173,7 +1173,8 @@ class Users extends CI_Controller {
             $this->form_validation->set_rules('email', 'Email', 
                 'trim|required|valid_email|callback_email_not_available_edit[' 
                 . $user_id . ']');
-            $this->form_validation->set_rules('default_url', 'URL', 'trim|prep_url|valid_url_format|xss_clean');
+            $this->form_validation->set_rules('default_url', 'URL',
+             'trim|prep_url|valid_url_format|xss_clean');
 
             if ($this->form_validation->run() == FALSE) {
                 $batch = array($this->input->post('department_id'));
