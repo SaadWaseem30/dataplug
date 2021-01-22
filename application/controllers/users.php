@@ -1239,7 +1239,8 @@ class Users extends CI_Controller {
             $user_id = $slug;
 
             if (!$this->acl->hasPermission('users', 'delete')) {
-                $this->session->set_flashdata('validate', array('message' => "You don't have enough permissions to do this task.", 'type' => 'warning'));
+                $this->session->set_flashdata('validate', array('message' =>
+                 "You don't have enough permissions to do this task.", 'type' => 'warning'));
                 redirect(base_url() . 'users');
             }
 
