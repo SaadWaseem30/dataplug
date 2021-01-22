@@ -139,7 +139,8 @@ class Site extends CI_Controller {
 
                 $this->db->where('id', $site_id);
                 $this->db->update('site_settings', $app_settings);
-                $this->session->set_flashdata('validate', array('message' => 'Setting saved successfully.', 'type' => 'success'));
+                $this->session->set_flashdata('validate', array('message'
+                 => 'Setting saved successfully.', 'type' => 'success'));
                 redirect(base_url());
             }
             $data['active_tab'] = 'app';
