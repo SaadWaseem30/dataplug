@@ -1204,7 +1204,8 @@ class Users extends CI_Controller {
                 $this->users_model->edit_user($user_id, $data);
                 //array parameters : action, description, before,
                 // after, app_id, app_name, form_id, form_name
-                $logary=array('action'=>'update','description'=>'edit user','after'=>  json_encode($data),'before'=>json_encode($user_rec));
+                $logary=array('action'=>'update','description'=>'edit user','after'=>
+                  json_encode($data),'before'=>json_encode($user_rec));
                 addlog($logary);
 
                 // if ($group_id != $user_rec['group_id'])
