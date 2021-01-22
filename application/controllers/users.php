@@ -1300,7 +1300,8 @@ class Users extends CI_Controller {
 
     function email_not_available_edit($key, $user_id) {
         if ($this->users_model->email_already_exist_edit($key, $user_id)) {
-            $this->form_validation->set_message('email_not_available_edit', '%s not available');
+            $this->form_validation->set_message('
+                email_not_available_edit', '%s not available');
             return false;
         } else {
             return true;
