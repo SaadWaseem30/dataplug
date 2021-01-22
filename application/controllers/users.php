@@ -1170,7 +1170,9 @@ class Users extends CI_Controller {
              'trim|required|min_length[1]|xss_clean');
             //$this->form_validation->set_rules('user_name', 'User Name',
             // 'trim|required|callback_user_name_not_available[' . $user_id . ']');
-            $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|callback_email_not_available_edit[' . $user_id . ']');
+            $this->form_validation->set_rules('email', 'Email', 
+                'trim|required|valid_email|callback_email_not_available_edit[' 
+                . $user_id . ']');
             $this->form_validation->set_rules('default_url', 'URL', 'trim|prep_url|valid_url_format|xss_clean');
 
             if ($this->form_validation->run() == FALSE) {
