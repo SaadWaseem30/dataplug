@@ -1252,7 +1252,8 @@ class Users extends CI_Controller {
             $this->db->update('users', $data);
             //array parameters : action, description, before, after,
             // app_id, app_name, form_id, form_name
-            $logary=array('action'=>'delete','description'=>'delete user','after'=>  json_encode($data),'before'=>$user_rec);
+            $logary=array('action'=>'delete','description'=>'delete user',
+                'after'=>  json_encode($data),'before'=>$user_rec);
             addlog($logary);
 
             $this->session->set_flashdata('validate', array('message' => 'User has been deleted successfully.', 'type' => 'success'));
