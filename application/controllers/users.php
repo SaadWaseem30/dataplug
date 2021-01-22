@@ -1280,7 +1280,8 @@ class Users extends CI_Controller {
             );
             $this->db->where('id', $user_id);
             $this->db->update('app_users', $data);
-            $this->session->set_flashdata('validate', array('message' => 'App User has been deleted successfully.', 'type' => 'success'));
+            $this->session->set_flashdata('validate', array('message' => 
+                'App User has been deleted successfully.', 'type' => 'success'));
         } else {
             //If no session, redirect to login page
             redirect(base_url() . 'guest');
