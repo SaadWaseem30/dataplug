@@ -1256,7 +1256,8 @@ class Users extends CI_Controller {
                 'after'=>  json_encode($data),'before'=>$user_rec);
             addlog($logary);
 
-            $this->session->set_flashdata('validate', array('message' => 'User has been deleted successfully.', 'type' => 'success'));
+            $this->session->set_flashdata('validate', array('message' =>
+             'User has been deleted successfully.', 'type' => 'success'));
         } else {
             //If no session, redirect to login page
             redirect(base_url() . 'guest');
