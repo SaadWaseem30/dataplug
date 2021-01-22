@@ -1250,7 +1250,8 @@ class Users extends CI_Controller {
             );
             $this->db->where('id', $user_id);
             $this->db->update('users', $data);
-            //array parameters : action, description, before, after, app_id, app_name, form_id, form_name
+            //array parameters : action, description, before, after,
+            // app_id, app_name, form_id, form_name
             $logary=array('action'=>'delete','description'=>'delete user','after'=>  json_encode($data),'before'=>$user_rec);
             addlog($logary);
 
